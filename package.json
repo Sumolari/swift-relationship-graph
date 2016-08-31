@@ -1,8 +1,8 @@
 {
-	"name": "swift-dependencies-graph",
+	"name": "swift-dependency-graph",
 	"version": "0.0.1",
-	"description": "A dependencies graph generator for Swift codebases",
-	"main": "index.js",
+	"description": "A dependency graph generator for Swift codebases",
+	"main": "dependency-graph.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -10,7 +10,8 @@
 		"swift",
 		"dependency",
 		"graph",
-		"dependencies"
+		"dependencies",
+		"protocol"
 	],
 	"author": "Lluís Ulzurrun de Asanza i Sàez",
 	"license": "MIT",

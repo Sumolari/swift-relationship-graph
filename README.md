@@ -7,3 +7,4 @@ This project is a small utility to create a dependency graph for protocols in a 
 [ ] Call SourceKitten automatically
 [ ] Improve documentation
 [ ] Publish to NPM registry
+[ ] Add support for classes' dependency graph
