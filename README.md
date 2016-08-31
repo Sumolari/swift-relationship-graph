@@ -2,9 +2,9 @@ This project is a small utility to create a dependency graph for protocols in a 
 
 # Todo
 
-[ ] Improve README
-[ ] Add proper error messages
-[ ] Call SourceKitten automatically
-[ ] Improve documentation
-[ ] Publish to NPM registry
-[ ] Add support for classes' dependency graph
+- [ ] Improve README
+- [ ] Add proper error messages
+- [ ] Call SourceKitten automatically
+- [ ] Improve documentation
+- [ ] Publish to NPM registry
+- [ ] Add support for classes' dependency graph
