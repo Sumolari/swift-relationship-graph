@@ -1,23 +1,24 @@
 {
-	"name": "swift-dependency-graph",
-	"version": "0.0.1",
-	"description": "A dependency graph generator for Swift codebases",
-	"main": "dependency-graph.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"swift",
-		"dependency",
-		"graph",
-		"dependencies",
-		"protocol"
-	],
-	"author": "Lluís Ulzurrun de Asanza i Sàez",
-	"license": "MIT",
-	"dependencies": {
-		"coffee-script": "^1.10.0",
-		"express": "^4.14.0",
-		"lodash": "^4.15.0"
-	}
+  "name": "swift-dependency-graph",
+  "version": "0.0.1",
+  "description": "A dependency graph generator for Swift codebases",
+  "main": "dependency-graph.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "swift",
+    "dependency",
+    "graph",
+    "dependencies",
+    "protocol"
+  ],
+  "author": "Lluís Ulzurrun de Asanza i Sàez",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.5",
+    "coffee-script": "^1.10.0",
+    "colors": "^1.1.2",
+    "lodash": "^4.15.0"
+  }
 }
