@@ -4,13 +4,13 @@ classes and structs in a Swift codebase.
 # Examples
 
 ## [Alamofire](https://github.com/Alamofire/Alamofire)
-![Alamofire](https://cloud.githubusercontent.com/assets/779767/18397916/ac6ac932-76ca-11e6-8757-5754a51852b7.png)
+![Alamofire](https://cloud.githubusercontent.com/assets/779767/18409425/f740c232-7746-11e6-80f6-7a89562787f3.png)
 
 ## [Haneke](https://github.com/Haneke/HanekeSwift)
-![Haneke](https://cloud.githubusercontent.com/assets/779767/18397917/ac6bd41c-76ca-11e6-8e15-870d6cea2bb3.png)
+![Haneke](https://cloud.githubusercontent.com/assets/779767/18409427/f747d5ae-7746-11e6-8f33-b5e94640cdac.png)
 
 ## [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
-![Objectmapper](https://cloud.githubusercontent.com/assets/779767/18397915/ac686d18-76ca-11e6-9b8c-faf8dc158213.png)
+![Objectmapper](https://cloud.githubusercontent.com/assets/779767/18409426/f7459442-7746-11e6-8fd5-39cafaf032d4.png)
 
 # Requirements
 
