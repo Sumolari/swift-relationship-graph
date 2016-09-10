@@ -1,5 +1,12 @@
 _ = require 'lodash'
 analyzer = require './analyzer.coffee'
+handlebars = require 'handlebars'
+fs = require 'fs'
+path = require 'path'
+
+legendPath = path.resolve __dirname, '../assets/legend.template'
+legendSource = fs.readFileSync legendPath
+legendTemplate = handlebars.compile legendSource.toString()
 
 module.exports = (json, types) ->
 
@@ -15,6 +22,8 @@ module.exports = (json, types) ->
     classes:
       color: 'green'
       data: analysis.classes
+
+  legend = legendTemplate graph
 
   if _.isString types
     types = types.split ','
@@ -38,6 +47,8 @@ module.exports = (json, types) ->
 
   for key, entry of graph
     printColoredData entry.color, entry.data
+
+  dotLines.push legend
 
   dotLines.push '}'
 

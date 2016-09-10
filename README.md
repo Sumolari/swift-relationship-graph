@@ -72,3 +72,5 @@ Run each `.sh` file to automatically download and generate the dependency diagra
 - [ ] Publish to NPM registry
 - [X] Add support for classes' dependency graph
 - [ ] Made it `-g`-compatible
+- [X] Add legend
+- [ ] Add support for generating UML class-like diagrams
