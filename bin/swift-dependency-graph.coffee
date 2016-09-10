@@ -60,8 +60,8 @@ fs.readFileAsync( fileName )
 
     console.error ''
 
-    switch error.code
-      when os.constants.errno.ENOENT
+    switch error.errno
+      when -os.constants.errno.ENOENT
         console.error "#{"ERROR:".red} Couldn't open file #{fileName.magenta}"
       else
         console.error error
