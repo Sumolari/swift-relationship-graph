@@ -56,7 +56,11 @@ module.exports = (json) ->
 
         return name
 
-      TypeHandlers[type]? entity[Key.Name], parents
+    else
+
+      parents = []
+
+    TypeHandlers[type]? entity[Key.Name], parents
 
   for protocol in protocols
     parseEntity protocol, DeclarationType.SwiftProtocol
