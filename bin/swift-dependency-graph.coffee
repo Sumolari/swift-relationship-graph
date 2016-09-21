@@ -22,7 +22,7 @@ types = process.argv[4] ? defaultType
 outputFileName = process.argv[5]
 
 if process.argv.length < 3 or operation not in Object.keys availableOperations
-  console.log "Usage: ./dependency-graph.sh
+  console.log "Usage: bin/dependency-graph
     #{'<pathToJSON>'.magenta}
     #{'[<operation>, <type...>, <pathToOutputFile>]'.yellow}"
   console.log ''

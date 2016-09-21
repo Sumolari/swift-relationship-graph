@@ -1,55 +1,55 @@
-subgraph cluster_legend {
+	subgraph cluster_legend {
 
-    label="Legend";
+		label="Legend";
 
-    subgraph cluster_entities {
+		subgraph cluster_entities {
 
-    	pencolor=transparent;
-        label="Entities";
+			pencolor=transparent;
+			label="Entities";
 
-        _legend_sample_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
-        _legend_sample_class_[shape=box color={{classes.color}}, label="Some class"];
-        _legend_sample_struct_[shape=box color={{structs.color}}, label="Some struct"];
-        _legend_sample_system_class_[label="System class"];
-        _legend_sample_system_protocol_[label="System protocol"];
+			_legend_sample_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
+			_legend_sample_class_[shape=box color={{classes.color}}, label="Some class"];
+			_legend_sample_struct_[shape=box color={{structs.color}}, label="Some struct"];
+			_legend_sample_system_class_[label="System class"];
+			_legend_sample_system_protocol_[label="System protocol"];
 
-        _legend_sample_protocol_ -> _legend_sample_class_ [style=invis];
-        _legend_sample_class_ -> _legend_sample_struct_ [style=invis];
-        _legend_sample_struct_ -> _legend_sample_system_class_ [style=invis];
-        _legend_sample_system_class_ -> _legend_sample_system_protocol_ [style=invis];
+			_legend_sample_protocol_ -> _legend_sample_class_ [style=invis];
+			_legend_sample_class_ -> _legend_sample_struct_ [style=invis];
+			_legend_sample_struct_ -> _legend_sample_system_class_ [style=invis];
+			_legend_sample_system_class_ -> _legend_sample_system_protocol_ [style=invis];
 
-    }
+		}
 
-    subgraph cluster_conformance {
+		subgraph cluster_conformance {
 
-    	pencolor=transparent;
-        label = "Protocol conformance"
+			pencolor=transparent;
+			label = "Protocol conformance"
 
-        _legend_conformance_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
-        _legend_conformance_class_[shape=box color={{classes.color}}, label="Some class"];
-        _legend_conformance_struct_[shape=box color={{structs.color}}, label="Some struct"];
+			_legend_conformance_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
+			_legend_conformance_class_[shape=box color={{classes.color}}, label="Some class"];
+			_legend_conformance_struct_[shape=box color={{structs.color}}, label="Some struct"];
 
-        _legend_conformance_class_ -> _legend_conformance_protocol_;
-        _legend_conformance_struct_ -> _legend_conformance_protocol_;
+			_legend_conformance_class_ -> _legend_conformance_protocol_;
+			_legend_conformance_struct_ -> _legend_conformance_protocol_;
 
-    }
+		}
 
-    subgraph cluster_inheritance {
+		subgraph cluster_inheritance {
 
-    	pencolor=transparent;
-        label = "Inheritance"
+			pencolor=transparent;
+			label = "Inheritance"
 
-        _legend_inheritance_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
-        _legend_inheritance_class_[shape=box color={{classes.color}}, label="Some class"];
-        _legend_inheritance_system_protocol_[label="Hashable"];
-        _legend_inheritance_system_class_[label="NSObject"];
+			_legend_inheritance_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
+			_legend_inheritance_class_[shape=box color={{classes.color}}, label="Some class"];
+			_legend_inheritance_system_protocol_[label="Hashable"];
+			_legend_inheritance_system_class_[label="NSObject"];
 
-        _legend_inheritance_class_ -> _legend_inheritance_system_class_;
-        _legend_inheritance_protocol_ -> _legend_inheritance_system_protocol_;
+			_legend_inheritance_class_ -> _legend_inheritance_system_class_;
+			_legend_inheritance_protocol_ -> _legend_inheritance_system_protocol_;
 
-    }
+		}
 
-    _legend_inheritance_system_class_ -> _legend_conformance_class_ [style=invis];
-    _legend_inheritance_system_protocol_ -> _legend_conformance_struct_ [style=invis];
+		_legend_inheritance_system_class_ -> _legend_conformance_class_ [style=invis];
+		_legend_inheritance_system_protocol_ -> _legend_conformance_struct_ [style=invis];
 
-}
+	}

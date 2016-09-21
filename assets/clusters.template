@@ -1,0 +1,17 @@
+{{#each clusters}}
+
+	subgraph cluster_{{number}} {
+
+		pencolor=transparent;
+
+		{{#each entities}}
+		_{{name}}_[shape=box color={{color}}, label="{{name}}"];
+		{{/each}}
+
+		{{#each relationships}}
+		_{{source}}_ -> _{{target}}_;
+		{{/each}}
+
+	}
+
+{{/each}}

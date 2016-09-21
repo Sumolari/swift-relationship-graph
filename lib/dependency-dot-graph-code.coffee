@@ -8,6 +8,14 @@ legendPath = path.resolve __dirname, '../assets/legend.template'
 legendSource = fs.readFileSync legendPath
 legendTemplate = handlebars.compile legendSource.toString()
 
+clustersPath = path.resolve __dirname, '../assets/clusters.template'
+clustersSource = fs.readFileSync clustersPath
+clustersTemplate = handlebars.compile clustersSource.toString()
+
+dotGraphPath = path.resolve __dirname, '../assets/dotGraph.template'
+dotGraphSource = fs.readFileSync dotGraphPath
+dotGraphTemplate = handlebars.compile dotGraphSource.toString()
+
 module.exports = (json, types) ->
 
   analysis = analyzer json
@@ -23,8 +31,6 @@ module.exports = (json, types) ->
       color: 'green'
       data: analysis.classes
 
-  legend = legendTemplate graph
-
   if _.isString types
     types = types.split ','
 
@@ -34,22 +40,52 @@ module.exports = (json, types) ->
       if key not in types
         delete graph[key]
 
+  entities = {}
+  for type, typeInfo of graph
+    color = typeInfo.color
+    for name, parents of typeInfo.data
+      entities[name] =
+        color: color
+        parents: parents
+        cluster: Object.keys(entities).length
+
+  for entity, info of entities
+    for parent in info.parents
+      unless entities[parent]?
+        entities[parent] =
+          color: 'black'
+          parents: []
+      originalCluster = entities[parent].cluster
+      for other_entity, other_info of entities
+        if entities[other_entity].cluster is originalCluster
+          entities[other_entity].cluster = info.cluster
+
+  clusters = {}
+  for entity, info of entities
+    unless clusters[info.cluster]
+      clusters[info.cluster] =
+        number: info.cluster
+        entities: []
+        relationships: []
+    clusters[info.cluster].entities.push {
+      name: entity
+      color: info.color
+    }
+    for parent in info.parents
+      clusters[info.cluster].relationships.push {
+        source: entity
+        target: parent
+      }
+
+  clusters = _.map clusters, (item) -> item
+
+  clusters = clustersTemplate { clusters: clusters }
+
+  legend = legendTemplate graph
+
   dotLines = ['digraph dependencies_diagram {']
 
-  print = (source, targets, color) ->
-    dotLines.push "\"#{source}\" [shape=box color=#{color}];"
-    for target in targets
-      dotLines.push "\"#{source}\" -> \"#{target}\";"
-
-  printColoredData = (color, data) ->
-    for source, targets of data
-      print source, targets, color
-
-  for key, entry of graph
-    printColoredData entry.color, entry.data
-
-  dotLines.push legend
-
-  dotLines.push '}'
-
-  return dotLines.join '\n'
+  return dotGraphTemplate {
+    clusters: clusters
+    legend: legend
+  }
