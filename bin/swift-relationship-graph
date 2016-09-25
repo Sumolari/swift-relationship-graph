@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 require( 'coffee-script/register' );
-require( './swift-dependency-graph.coffee' );
+require( './swift-relationship-graph.coffee' );

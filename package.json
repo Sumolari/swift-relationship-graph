@@ -1,28 +1,32 @@
 {
-	"name": "swift-dependency-graph",
+	"name": "swift-relationship-graph",
 	"version": "0.0.1",
-	"description": "A dependency graph generator for Swift codebases",
-	"main": "bin/swift-dependency-graph",
+	"description": "A relationship graph generator for Swift codebases",
+	"main": "bin/swift-relationship-graph",
 	"scripts": {
-		"start": "./bin/swift-dependency-graph",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "./bin/swift-relationship-graph"
 	},
+	"bin": {
+		"swift-relationship-graph": "bin/swift-relationship-graph"
+	},
+	"preferGlobal": true,
 	"keywords": [
 		"swift",
 		"dependency",
+		"inheritance",
+		"relationship",
 		"graph",
-		"dependencies",
 		"protocol",
-		"classes",
-		"structs"
+		"class",
+		"struct"
 	],
 	"author": "Lluís Ulzurrun de Asanza i Sàez",
 	"license": "MIT",
 	"dependencies": {
-		"bluebird": "^3.4.5",
-		"coffee-script": "^1.10.0",
-		"colors": "^1.1.2",
-		"handlebars": "^4.0.5",
-		"lodash": "^4.15.0"
+		"bluebird": "~3.4.5",
+		"coffee-script": "~1.10.0",
+		"colors": "~1.1.2",
+		"handlebars": "~4.0.5",
+		"lodash": "~4.15.0"
 	}
 }

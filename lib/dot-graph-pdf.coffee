@@ -1,5 +1,5 @@
 _ = require 'lodash'
-generateCode = require './dependency-dot-graph-code.coffee'
+generateCode = require './dot-graph-code.coffee'
 Bluebird = require 'bluebird'
 child_process = require 'child_process'
 path = require 'path'

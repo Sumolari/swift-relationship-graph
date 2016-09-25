@@ -1,4 +1,4 @@
-This project is a small utility to create a dependency graph for protocols,
+This project is a small utility to create a relationship graph for protocols,
 classes and structs in a Swift codebase.
 
 # Examples
@@ -71,6 +71,13 @@ Run each `.sh` file to automatically download and generate the dependency diagra
 - [ ] Improve documentation
 - [ ] Publish to NPM registry
 - [X] Add support for classes' dependency graph
-- [ ] Made it `-g`-compatible
+- [X] Made it `-g`-compatible
 - [X] Add legend
 - [ ] Add support for generating UML class-like diagrams
+- [ ] Add unit tests
+
+## Changelog
+
+### 0.0.1
+
+- First version
