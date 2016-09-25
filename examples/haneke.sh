@@ -26,7 +26,7 @@ sourcekitten doc --module-name Haneke -- -workspace Haneke.xcworkspace \
 popd
 
 # Run Swift Dependency Graph
-$DIR/../bin/swift-dependency-graph \
+$DIR/../bin/swift-relationship-graph \
 	$HANEKE_DOCS_PATH \
 	graph \
 	protocols,structs,classes \

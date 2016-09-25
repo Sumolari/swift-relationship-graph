@@ -4,13 +4,13 @@ classes and structs in a Swift codebase.
 # Examples
 
 ## [Alamofire](https://github.com/Alamofire/Alamofire)
-![Alamofire](https://cloud.githubusercontent.com/assets/779767/18409425/f740c232-7746-11e6-80f6-7a89562787f3.png)
+[![Alamofire](https://github.com/Sumolari/swift-relationship-graph/files/491546/alamofire.pdf)](https://github.com/Sumolari/swift-relationship-graph/files/491546/alamofire.pdf)
 
 ## [Haneke](https://github.com/Haneke/HanekeSwift)
-![Haneke](https://cloud.githubusercontent.com/assets/779767/18409427/f747d5ae-7746-11e6-8f33-b5e94640cdac.png)
+[![Haneke](https://github.com/Sumolari/swift-relationship-graph/files/491547/Haneke.pdf)](https://github.com/Sumolari/swift-relationship-graph/files/491547/Haneke.pdf)
 
 ## [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
-![Objectmapper](https://cloud.githubusercontent.com/assets/779767/18409426/f7459442-7746-11e6-8fd5-39cafaf032d4.png)
+[![Objectmapper](https://github.com/Sumolari/swift-relationship-graph/files/491548/ObjectMapper.pdf)](https://github.com/Sumolari/swift-relationship-graph/files/491548/ObjectMapper.pdf)
 
 # Requirements
 

@@ -26,7 +26,7 @@ sourcekitten doc --module-name Alamofire -- -project Alamofire.xcodeproj \
 popd
 
 # Run Swift Dependency Graph
-$DIR/../bin/swift-dependency-graph \
+$DIR/../bin/swift-relationship-graph \
 	$ALAMOFIRE_DOCS_PATH \
 	graph \
 	protocols,structs,classes \

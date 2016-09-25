@@ -27,7 +27,7 @@ sourcekitten doc --module-name ObjectMapper -- \
 popd
 
 # Run Swift Dependency Graph
-$DIR/../bin/swift-dependency-graph \
+$DIR/../bin/swift-relationship-graph \
 	$OBJECTMAPPER_DOCS_PATH \
 	graph \
 	protocols,structs,classes \
