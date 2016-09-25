@@ -4,13 +4,13 @@ classes and structs in a Swift codebase.
 # Examples
 
 ## [Alamofire](https://github.com/Alamofire/Alamofire)
-[![Alamofire](https://github.com/Sumolari/swift-relationship-graph/files/491546/alamofire.pdf)](https://github.com/Sumolari/swift-relationship-graph/files/491546/alamofire.pdf)
+[![Alamofire](https://cloud.githubusercontent.com/assets/779767/18813985/2e599966-830d-11e6-8162-892305455bc9.png)](https://cloud.githubusercontent.com/assets/779767/18813985/2e599966-830d-11e6-8162-892305455bc9.png)
 
 ## [Haneke](https://github.com/Haneke/HanekeSwift)
-[![Haneke](https://github.com/Sumolari/swift-relationship-graph/files/491547/Haneke.pdf)](https://github.com/Sumolari/swift-relationship-graph/files/491547/Haneke.pdf)
+[![Haneke](https://cloud.githubusercontent.com/assets/779767/18813984/2e58e390-830d-11e6-9489-823a44383a5d.png)](https://cloud.githubusercontent.com/assets/779767/18813984/2e58e390-830d-11e6-9489-823a44383a5d.png)
 
 ## [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
-[![Objectmapper](https://github.com/Sumolari/swift-relationship-graph/files/491548/ObjectMapper.pdf)](https://github.com/Sumolari/swift-relationship-graph/files/491548/ObjectMapper.pdf)
+[![Objectmapper](https://cloud.githubusercontent.com/assets/779767/18813986/2e5aff36-830d-11e6-9721-d239d7db710c.png)](https://cloud.githubusercontent.com/assets/779767/18813986/2e5aff36-830d-11e6-9721-d239d7db710c.png)
 
 # Requirements
 
