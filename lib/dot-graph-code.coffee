@@ -38,7 +38,7 @@ module.exports = (json, types) ->
     keys = Object.keys graph
     for key in keys
       if key not in types
-        delete graph[key]
+        graph[key].data = []
 
   entities = {}
   for type, typeInfo of graph
