@@ -12,6 +12,10 @@ availableOperations =
     console.log require('../lib/dot-graph-code.coffee')(json, type)
   dotGraphPDF: require '../lib/dot-graph-pdf.coffee'
   graph: require '../lib/dot-graph-pdf.coffee'
+  dotTreeCode: (json,type) ->
+    console.log require('../lib/dot-tree-code.coffee')(json, type)
+  dotTreePDF: require '../lib/dot-tree-pdf.coffee'
+  tree: require '../lib/dot-tree-pdf.coffee'
 
 defaultOperation = 'graph'
 defaultType = _.first (v for key, v of Constants.SupportedTypes)
@@ -24,7 +28,7 @@ outputFileName = process.argv[5]
 if process.argv.length < 3 or operation not in Object.keys availableOperations
   console.log "Usage: swift-relationship-graph
     #{'<pathToJSON>'.magenta}
-    #{'[<operation>, <type...>, <pathToOutputFile>]'.yellow}"
+    #{'[<operation>, <type or root node...>, <pathToOutputFile>]'.yellow}"
   console.log ''
 
   ops = _.map availableOperations, (value, key) ->

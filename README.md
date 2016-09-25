@@ -83,6 +83,7 @@ Run each `.sh` file to automatically download and generate the relationsip diagr
 - [X] Add legend
 - [ ] Add support for generating UML class-like diagrams
 - [ ] Add unit tests
+- [X] Add support for filtering by entity (`tree` mode)
 
 ## Changelog
 
