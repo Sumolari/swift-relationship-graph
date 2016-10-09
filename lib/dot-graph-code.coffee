@@ -3,6 +3,7 @@ analyzer = require './analyzer.coffee'
 handlebars = require 'handlebars'
 fs = require 'fs'
 path = require 'path'
+Constants = require './constants.coffee'
 
 legendPath = path.resolve __dirname, '../assets/legend.template'
 legendSource = fs.readFileSync legendPath
@@ -22,14 +23,21 @@ module.exports = (json, types) ->
 
   graph =
     protocols:
-      color: 'blue'
+      color: Constants.Style.Protocols.Color
+      shape: Constants.Style.Protocols.Shape
       data: analysis.protocols
     structs:
-      color: 'red'
+      color: Constants.Style.Structs.Color
+      shape: Constants.Style.Structs.Shape
       data: analysis.structs
     classes:
-      color: 'green'
+      color: Constants.Style.Classes.Color
+      shape: Constants.Style.Classes.Shape
       data: analysis.classes
+    system:
+      color: Constants.Style.System.Color
+      shape: Constants.Style.System.Shape
+      data: []
 
   if _.isString types
     types = types.split ','
@@ -42,10 +50,10 @@ module.exports = (json, types) ->
 
   entities = {}
   for type, typeInfo of graph
-    color = typeInfo.color
     for name, parents of typeInfo.data
       entities[name] =
-        color: color
+        color: typeInfo.color
+        shape: typeInfo.shape
         parents: parents
         cluster: Object.keys(entities).length
 
@@ -53,7 +61,8 @@ module.exports = (json, types) ->
     for parent in info.parents
       unless entities[parent]?
         entities[parent] =
-          color: 'black'
+          color: Constants.Style.System.Color
+          shape: Constants.Style.System.Shape
           parents: []
       originalCluster = entities[parent].cluster
       for other_entity, other_info of entities
@@ -70,6 +79,7 @@ module.exports = (json, types) ->
     clusters[info.cluster].entities.push {
       name: entity
       color: info.color
+      shape: info.shape
     }
     for parent in info.parents
       clusters[info.cluster].relationships.push {

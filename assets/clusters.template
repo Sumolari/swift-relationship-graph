@@ -5,7 +5,7 @@
 		pencolor=transparent;
 
 		{{#each entities}}
-		_{{name}}_[shape=box color={{color}}, label="{{name}}"];
+		_{{name}}_[shape={{shape}} color={{color}}, label="{{name}}"];
 		{{/each}}
 
 		{{#each relationships}}

@@ -7,11 +7,11 @@
 			pencolor=transparent;
 			label="Entities";
 
-			_legend_sample_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
-			_legend_sample_class_[shape=box color={{classes.color}}, label="Some class"];
-			_legend_sample_struct_[shape=box color={{structs.color}}, label="Some struct"];
-			_legend_sample_system_class_[label="System class"];
-			_legend_sample_system_protocol_[label="System protocol"];
+			_legend_sample_protocol_[shape={{protocols.shape}} color={{protocols.color}}, label="Some protocol"];
+			_legend_sample_class_[shape={{classes.shape}} color={{classes.color}}, label="Some class"];
+			_legend_sample_struct_[shape={{structs.shape}} color={{structs.color}}, label="Some struct"];
+			_legend_sample_system_class_[shape={{system.shape}} color={{system.color}}, label="System class"];
+			_legend_sample_system_protocol_[shape={{system.shape}} color={{system.color}}, label="System protocol"];
 
 			_legend_sample_protocol_ -> _legend_sample_class_ [style=invis];
 			_legend_sample_class_ -> _legend_sample_struct_ [style=invis];
@@ -25,9 +25,9 @@
 			pencolor=transparent;
 			label = "Protocol conformance"
 
-			_legend_conformance_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
-			_legend_conformance_class_[shape=box color={{classes.color}}, label="Some class"];
-			_legend_conformance_struct_[shape=box color={{structs.color}}, label="Some struct"];
+			_legend_conformance_protocol_[shape={{protocols.shape}} color={{protocols.color}}, label="Some protocol"];
+			_legend_conformance_class_[shape={{classes.shape}} color={{classes.color}}, label="Some class"];
+			_legend_conformance_struct_[shape={{structs.shape}} color={{structs.color}}, label="Some struct"];
 
 			_legend_conformance_class_ -> _legend_conformance_protocol_;
 			_legend_conformance_struct_ -> _legend_conformance_protocol_;
@@ -39,10 +39,10 @@
 			pencolor=transparent;
 			label = "Inheritance"
 
-			_legend_inheritance_protocol_[shape=box color={{protocols.color}}, label="Some protocol"];
-			_legend_inheritance_class_[shape=box color={{classes.color}}, label="Some class"];
-			_legend_inheritance_system_protocol_[label="Hashable"];
-			_legend_inheritance_system_class_[label="NSObject"];
+			_legend_inheritance_protocol_[shape={{protocols.shape}} color={{protocols.color}}, label="Some protocol"];
+			_legend_inheritance_class_[shape={{classes.shape}} color={{classes.color}}, label="Some class"];
+			_legend_inheritance_system_protocol_[shape={{system.shape}} color={{system.color}}, label="Hashable"];
+			_legend_inheritance_system_class_[shape={{system.shape}} color={{system.color}}, label="NSObject"];
 
 			_legend_inheritance_class_ -> _legend_inheritance_system_class_;
 			_legend_inheritance_protocol_ -> _legend_inheritance_system_protocol_;

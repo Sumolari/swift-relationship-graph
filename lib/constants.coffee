@@ -17,3 +17,17 @@ module.exports =
     Protocols: 'protocols'
     Structs: 'structs'
     Classes: 'classes'
+
+  Style:
+    Protocols:
+      Color: 'blue'
+      Shape: 'box'
+    Structs:
+      Color: 'red'
+      Shape: 'box'
+    Classes:
+      Color: 'green'
+      Shape: 'box'
+    System:
+      Color: 'black'
+      Shape: 'oval'

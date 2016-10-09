@@ -3,6 +3,7 @@ analyzer = require './analyzer.coffee'
 handlebars = require 'handlebars'
 fs = require 'fs'
 path = require 'path'
+Constants = require './constants.coffee'
 
 legendPath = path.resolve __dirname, '../assets/legend.template'
 legendSource = fs.readFileSync legendPath
@@ -22,21 +23,28 @@ module.exports = (json, root) ->
 
   graph =
     protocols:
-      color: 'blue'
+      color: Constants.Style.Protocols.Color
+      shape: Constants.Style.Protocols.Shape
       data: analysis.protocols
     structs:
-      color: 'red'
+      color: Constants.Style.Structs.Color
+      shape: Constants.Style.Structs.Shape
       data: analysis.structs
     classes:
-      color: 'green'
+      color: Constants.Style.Classes.Color
+      shape: Constants.Style.Classes.Shape
       data: analysis.classes
+    system:
+      color: Constants.Style.System.Color
+      shape: Constants.Style.System.Shape
+      data: []
 
   entities = {}
   for type, typeInfo of graph
-    color = typeInfo.color
     for name, parents of typeInfo.data
       entities[name] =
-        color: color
+        color: typeInfo.color
+        shape: typeInfo.shape
         parents: parents
         relatedWithRoot: name is root
 
@@ -48,7 +56,8 @@ module.exports = (json, root) ->
       for parent in info.parents
         unless entities[parent]?
           entities[parent] =
-            color: 'black'
+            color: Constants.Style.System.Color
+            shape: Constants.Style.System.Shape
             parents: []
             relatedWithRoot: parent is root
         if not info.relatedWithRoot and entities[parent].relatedWithRoot
@@ -77,6 +86,7 @@ module.exports = (json, root) ->
     cluster.entities.push {
       name: entity
       color: info.color
+      shape: info.shape
     }
     for parent in info.parents
       if entities[parent]?
