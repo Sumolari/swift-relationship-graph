@@ -6,6 +6,7 @@ module.exports =
     Name: 'key.name'
 
   DeclarationType:
+    SwiftExtension: 'source.lang.swift.decl.extension'
     SwiftProtocol: 'source.lang.swift.decl.protocol'
     SwiftStruct: 'source.lang.swift.decl.struct'
     SwiftClass: 'source.lang.swift.decl.class'
